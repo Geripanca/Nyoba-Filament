@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Filament\Resources;
+use App\Models\Item;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\CurrencyInput; 
+use Filament\Forms\Components\Select;
 use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
 use App\Models\Order;

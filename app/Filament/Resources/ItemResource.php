@@ -24,10 +24,15 @@ class ItemResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                TextInput::make('name')->required(),
-                CurrencyInput::make('price')->required(),    
-            ]);
+        ->schema([
+            TextInput::make('name')->required(),
+            TextInput::make('price')
+                ->numeric()
+                ->required()
+                ->label('Price')
+                ->suffix('IDR'),
+        ]);
+
     }
 
     public static function table(Table $table): Table
